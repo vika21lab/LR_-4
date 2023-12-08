@@ -1,0 +1,34 @@
+from clsUniversity import University
+
+# создать объект базы данных
+database_University = University()
+
+
+# обновление по id учителей
+def update_commanddef (id, name_of_the_teacher, name_of_the_item, number_of_hours, type_of_final_certification, audience_number , date_of, lessons,group ):
+    (id, name_of_the_teacher, name_of_the_item, number_of_hours, type_of_final_certification, audience_number , date_of, lessons,group )
+    print(f"Данные учителя  с id = {id} обновлены")
+
+
+# просмотр всех записей
+def view_command():
+    for row in database_University.view():
+        print(row)
+
+
+# основная программа
+print("Список учителей")
+view_command()
+id_update = int(input("Введите id учителя "))
+print("Укажите новые данные: ")
+name_of_the_teacher = input("ФИО учителя")
+name_of_the_item = input("название предмета")
+number_of_hours = float(input("количество часов"))
+type_of_final_certification = input("тип итоговой аттестации")
+audience_number = float(input("номер аудитории"))
+date_of = float(input("дата "))
+lessons  = input("пары")
+group = input("группа")
+update_command(id_update, name_of_the_teacher, name_of_the_item, number_of_hours, type_of_final_certification, audience_number, date_of,lessons ,group )
+print("Список учителей ")
+view_command()
