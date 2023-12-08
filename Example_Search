@@ -1,0 +1,22 @@
+from clsUniversity import University
+
+# создать объект базы данных
+database_University = University()
+
+
+# просмотр всех записей
+def view_command():
+    for row in database_University.view():
+        print(row)
+
+
+def search_command(name_of_the_teacher):
+    if len(database_University.search(name_of_the_teacher)) > 0:
+        for row in database_University.search(name_of_the_teacher):
+           print(row)
+    else:
+      print("Такого учителя нет")
+
+
+
+search_command(input("Учитель ? "))
