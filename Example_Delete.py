@@ -4,7 +4,7 @@ from clsUniversity import University
 database_University = University()
 
 
-# удаление по id спортсема
+# удаление по id учителям
 def delete_command(id):
     database_University.delete(id)
     print(f"Данные учителя  с id = {id} удалены")
